@@ -19,7 +19,10 @@ module.exports = {
     window: "readonly",
   },
   rules: {
-    semi: [2, "never"],
+    "semi": ["error", "never"],
+    "quotes": ["error", "double"],
+    "@typescript-eslint/semi": ["error", "never"],
+    "@typescript-eslint/quotes": ["error", "double"],
     "import/no-extraneous-dependencies": [
       "error",
       // Don't slap build files for importing devDependencies.
