@@ -1,6 +1,6 @@
 {
   "name": "@tallyho/eslint-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Tally, the community owned and operated Web3 wallet.",
   "main": "index.js",
   "repository": "git@github.com:tallycash/eslint-config.git",
