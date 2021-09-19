@@ -1,0 +1,38 @@
+{
+  "name": "@tallyho/eslint-config",
+  "version": "0.0.1",
+  "description": "Tally, the community owned and operated Web3 wallet.",
+  "main": "index.js",
+  "repository": "git@github.com:tallycash/eslint-config.git",
+  "author": "Matt Luongo <matt@thesis.co>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tallycash/eslint-config/issues"
+  },
+  "homepage": "https://github.com/tallycash/eslint-config#readme",
+  "scripts": {
+    "test": "eslint . --no-fix"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.25.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.4.1"
+  },
+  "peerDependencies": {
+    "eslint": "^5.16.0 || ^6.1.0 || ^7.2.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "typescript": "^4.4.3"
+  }
+}
