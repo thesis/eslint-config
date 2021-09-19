@@ -19,7 +19,7 @@ module.exports = {
     window: "readonly",
   },
   rules: {
-    semi: "never",
+    semi: [2, "never"],
     "import/no-extraneous-dependencies": [
       "error",
       // Don't slap build files for importing devDependencies.
@@ -43,6 +43,6 @@ module.exports = {
   ignorePatterns: ["dist/"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: "./tsconfig-eslint.json",
+    project: "./.tsconfig-eslint.json",
   },
 }
