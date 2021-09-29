@@ -1,15 +1,15 @@
 {
-  "name": "@tallyho/eslint-config",
+  "name": "@thesis-co/eslint-config",
   "version": "0.1.0",
-  "description": "Tally, the community owned and operated Web3 wallet.",
+  "description": "ESLint TypeScript shareable config for Thesis wide projects",
   "main": "index.js",
-  "repository": "git@github.com:tallycash/eslint-config.git",
+  "repository": "git@github.com:thesis/eslint-config.git",
   "author": "Matt Luongo <matt@thesis.co>",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tallycash/eslint-config/issues"
+    "url": "https://github.com/thesis/eslint-config/issues"
   },
-  "homepage": "https://github.com/tallycash/eslint-config#readme",
+  "homepage": "https://github.com/thesis/eslint-config#readme",
   "scripts": {
     "test": "eslint . --no-fix"
   },
@@ -34,5 +34,8 @@
   "devDependencies": {
     "eslint": "^7.28.0",
     "typescript": "^4.4.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
