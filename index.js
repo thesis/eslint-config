@@ -6,13 +6,17 @@ const {
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 module.exports = {
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: "./.tsconfig-eslint.json",
+  },
+  plugins: ["prettier"],
   extends: [
     "airbnb",
     "airbnb-typescript",
     "airbnb/hooks",
-    "plugin:import/typescript",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
   ],
   globals: {
     document: "readonly",
@@ -42,10 +46,9 @@ module.exports = {
         ],
       },
     ],
-  },
-  ignorePatterns: ["dist/"],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    project: "./.tsconfig-eslint.json",
-  },
+    "prettier/prettier": [
+      "error",
+      require("@thesis-co/prettier-config")
+    ]
+  }
 }
