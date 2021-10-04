@@ -11,33 +11,35 @@ React / JSX.
 yarn add -D https://github.com/thesis/eslint-config.git
 ```
 
-2. In your `.eslintrc` add:
+2. In your `.eslintrc.js` add:
 
 ```js
 module.exports = {
   root: true,
   extends: [
-      "@thesis-co",
-  ],
-  parserOptions: {
-    project: "./.tsconfig-eslint.json",
-  },
+      "@thesis-co"
+  ]
 }
 ```
 
- 3. Add commands for linting to your `package.json`:
+3. Add `.tsconfig-eslint.json`. You can add this file manually with custom configuration or symlink this file with the default options.
+
+```bash
+ln -s ./node_modules/@thesis-co/eslint-config/.tsconfig-eslint.json ./.tsconfig-eslint.json
+```
+
+
+ 4. Add commands for linting to your `package.json`:
  ```json
 {
   "scripts": {
-    "lint:js": "eslint . --ext .js",
-    "lint:fix:js": "eslint . --ext .js --fix",
-    "lint:ts": "eslint . --ext .ts",
-    "lint:fix:ts": "eslint . --ext .ts --fix"
+    "lint:eslint": "eslint .",
+    "lint:fix:eslint": "eslint . --fix"
   },
 }
 ```
 
-## Adding a pre-commit hook using [pre-commit](https://pre-commit.com)
+## Sample config for related [pre-commit](https://pre-commit.com) hook
 
 ```yaml
  - repo: local
@@ -45,13 +47,13 @@ module.exports = {
     - id: lint-ts
       name: 'lint ts'
       entry: /usr/bin/env bash -c "yarn lint:ts"
-      files: '\.ts$'
+      files: '\.tsx$'
       language: script
       description: "Checks TS code according to the package's linter configuration"
     - id: lint-js
       name: 'lint js'
       entry: /usr/bin/env bash -c "yarn lint:js"
-      files: '\.js$'
+      files: '\.jsx$'
       language: script
       description: "Checks JS code according to the package's linter configuration"
 ```
