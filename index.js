@@ -16,7 +16,9 @@ module.exports = {
     "airbnb-typescript",
     "airbnb/hooks",
     "prettier",
-    "plugin:prettier/recommended"
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
   ],
   globals: {
     document: "readonly",
