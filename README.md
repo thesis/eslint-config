@@ -8,7 +8,7 @@ React / JSX.
 1. Install the shared config with `yarn`
 
 ```bash
-yarn add -D https://github.com/thesis/eslint-config.git
+yarn add -D @thesis-co/eslint-config
 ```
 
 2. In your `.eslintrc.js` add:
@@ -35,7 +35,7 @@ ln -s ./node_modules/@thesis-co/eslint-config/.tsconfig-eslint.json ./.tsconfig-
   "scripts": {
     "lint:eslint": "eslint .",
     "lint:fix:eslint": "eslint . --fix"
-  },
+  }
 }
 ```
 
