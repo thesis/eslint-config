@@ -6,28 +6,25 @@ const {
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 module.exports = {
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: "./.tsconfig-eslint.json",
+  },
+  plugins: ["prettier"],
   extends: [
     "airbnb",
     "airbnb-typescript",
     "airbnb/hooks",
+    "prettier",
+    "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
   ],
-  globals: {
-    document: "readonly",
-    window: "readonly",
-  },
   rules: {
     "semi": ["error", "never"],
     "quotes": ["error", "double"],
     "@typescript-eslint/semi": ["error", "never"],
     "@typescript-eslint/quotes": ["error", "double"],
-    "import/no-extraneous-dependencies": [
-      "error",
-      // Don't slap build files for importing devDependencies.
-      { devDependencies: ["!+(src/api|ui)/**/*.+(ts|js)"] },
-    ],
     // Add known-safe exceptions to no-param-reassign.
     "no-param-reassign": [
       airbnbNoParamReassignRules[0],
@@ -42,10 +39,9 @@ module.exports = {
         ],
       },
     ],
-  },
-  ignorePatterns: ["dist/"],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    project: "./.tsconfig-eslint.json",
-  },
+    "prettier/prettier": [
+      "error",
+      require("@thesis-co/prettier-config")
+    ]
+  }
 }
