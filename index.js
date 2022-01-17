@@ -39,6 +39,7 @@ module.exports = {
         ],
       },
     ],
+    "no-only-tests/no-only-tests": "error",
     "prettier/prettier": [
       "error",
       require("@thesis-co/prettier-config")
