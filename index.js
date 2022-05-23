@@ -10,7 +10,7 @@ module.exports = {
   parserOptions: {
     project: "./.tsconfig-eslint.json",
   },
-  plugins: ["prettier"],
+  plugins: ["prettier", "no-only-tests"],
   extends: [
     "airbnb",
     "airbnb-typescript",
