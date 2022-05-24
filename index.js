@@ -10,7 +10,7 @@ module.exports = {
   parserOptions: {
     project: "./.tsconfig-eslint.json",
   },
-  plugins: ["prettier"],
+  plugins: ["prettier", "no-only-tests"],
   extends: [
     "airbnb",
     "airbnb-typescript",
@@ -39,6 +39,7 @@ module.exports = {
         ],
       },
     ],
+    "no-only-tests/no-only-tests": "error",
     "prettier/prettier": [
       "error",
       require("@thesis-co/prettier-config")
