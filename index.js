@@ -21,10 +21,22 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
   ],
   rules: {
-    "semi": ["error", "never"],
-    "quotes": ["error", "double"],
+    semi: ["error", "never"],
+    quotes: [
+      "error",
+      "double",
+      {
+        avoidEscape: true,
+      },
+    ],
     "@typescript-eslint/semi": ["error", "never"],
-    "@typescript-eslint/quotes": ["error", "double"],
+    "@typescript-eslint/quotes": [
+      "error",
+      "double",
+      {
+        avoidEscape: true,
+      },
+    ],
     // Add known-safe exceptions to no-param-reassign.
     "no-param-reassign": [
       airbnbNoParamReassignRules[0],
