@@ -5,9 +5,10 @@ React / JSX.
 
 ## Getting started
 
-1. Install the shared config with `yarn`
+1. Install `eslint` and the shared config with `yarn`
 
 ```bash
+yarn add -D eslint prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser
 yarn add -D @thesis-co/eslint-config
 ```
 
