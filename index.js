@@ -28,7 +28,11 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
   ],
   rules: {
+    // Executive decision: semi-colons aren't removed by prettier for backwards
+    // compatibility. We don't have that requirement 🔪
     semi: ["error", "never"],
+    // Executive decision: Don't use `backtick quotes` unless you're using
+    // interpolation, and prefer double quotes to single. Consistency is 🔑
     quotes: [
       "error",
       "double",
@@ -74,8 +78,10 @@ module.exports = {
         },
       },
     ],
+    // prefer the @typescript-eslint rule to the base
     "@typescript-eslint/no-unused-vars": "error",
     "no-unused-vars": "off",
+    // .only tests being committed are typically a mistake
     "no-only-tests/no-only-tests": "error",
     "prettier/prettier": [
       "error",
