@@ -78,8 +78,13 @@ module.exports = {
         },
       },
     ],
-    // prefer the @typescript-eslint rule to the base
-    "@typescript-eslint/no-unused-vars": "error",
+    // prefer the @typescript-eslint rule to the base,
+    // and further allow underscore-only identifiers to indicate ignored positional
+    // variables, parameters, etc.
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { argsIgnorePattern: "^_+$", varsIgnorePattern: "^_+$" },
+    ],
     "no-unused-vars": "off",
     // .only tests being committed are typically a mistake
     "no-only-tests/no-only-tests": "error",
