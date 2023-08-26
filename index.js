@@ -10,6 +10,8 @@ const {
 const {
   rules: { "no-param-reassign": airbnbNoParamReassignRules },
 } = require("eslint-config-airbnb-base/rules/best-practices")
+
+const thesisPrettierConfig = require("@thesis-co/prettier-config")
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 module.exports = {
@@ -88,9 +90,6 @@ module.exports = {
     "no-unused-vars": "off",
     // .only tests being committed are typically a mistake
     "no-only-tests/no-only-tests": "error",
-    "prettier/prettier": [
-      "error",
-      require("@thesis-co/prettier-config")
-    ]
-  }
+    "prettier/prettier": ["error", thesisPrettierConfig],
+  },
 }
