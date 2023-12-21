@@ -27,7 +27,7 @@ module.exports = {
     "prettier",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-type-checked",
   ],
   rules: {
     // Executive decision: semi-colons aren't removed by prettier for backwards
