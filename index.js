@@ -92,4 +92,10 @@ module.exports = {
     "no-only-tests/no-only-tests": "error",
     "prettier/prettier": ["error", thesisPrettierConfig],
   },
+  overrides: [
+    {
+      files: ["*.js"],
+      extends: ["plugin:@typescript-eslint/disable-type-checked"],
+    },
+  ],
 }
