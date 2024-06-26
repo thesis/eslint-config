@@ -91,6 +91,20 @@ module.exports = {
     // .only tests being committed are typically a mistake
     "no-only-tests/no-only-tests": "error",
     "prettier/prettier": ["error", thesisPrettierConfig],
+    // Enforces whitespaces before and after multiline variables
+    "padding-line-between-statements": [
+      "error",
+      {
+        blankLine: "always",
+        prev: "*",
+        next: ["multiline-const", "multiline-let", "multiline-var"],
+      },
+      {
+        blankLine: "always",
+        prev: ["multiline-const", "multiline-let", "multiline-var"],
+        next: "*",
+      },
+    ],
   },
   overrides: [
     {
