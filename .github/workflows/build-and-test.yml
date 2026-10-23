@@ -20,6 +20,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: "${{ steps.nvm.outputs.NVMRC }}"
+        check-latest: true
         cache: "yarn"
     - run: yarn install --frozen-lockfile
     - run: yarn test
